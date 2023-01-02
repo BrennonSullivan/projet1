@@ -1,5 +1,5 @@
 ## projet1
-#Project Requirements
+# Project Requirements
 With your team, you'll conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. You'll also learn about agile development methodologies to help you work collaboratively. You'll implement feature and bug fixes using Git branch workflow and pull requests.
 
 You'll write your own user stories and acceptance criteria in GitHub Issues to help your team stay on track with the project. Using GitHub Project to track the status of your project tasks will help you understand the benefits of Kanban boards.
@@ -26,7 +26,7 @@ Have a clean repository that meets quality coding standards (file structure, nam
 
 Have a quality README (including a unique name, description, technologies used, screenshot, and link to the deployed application).
 
-#Presentation Requirements
+# Presentation Requirements
 Use this Project Presentation Template Links to an external site.to address the following:
 
 Elevator pitch: A one-minute description of your application.
@@ -41,7 +41,7 @@ Directions for future development.
 
 Links to the deployed application and the GitHub repository.
 
-#Grading Requirements
+# Grading Requirements
 This project is graded based on the following criteria:
 
 Technical Acceptance Criteria: 25%
