@@ -12,7 +12,7 @@
 * [Brennon Sullivan](https://github.com/brennonsullivan)
 * [Eric Reyes](https://github.com/ericrey93) 
 * [Ilknur Dayanc](https://github.com/ilknur2603)
-* []()
+* [Roger Davis]()
 
 **[Deployed Application]()**
 
