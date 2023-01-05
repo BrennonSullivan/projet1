@@ -77,3 +77,12 @@ var runApp = (event => {
 });
 
 renderBook();
+
+// to call the saved books in to search
+$('#menu-title').on("click", (event) => {
+    event.preventDefault();
+    $("#search-input").val(event.target.textContent);
+    runApp();
+    $('#search-input').empty(); 
+});
+
