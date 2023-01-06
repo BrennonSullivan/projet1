@@ -63,11 +63,80 @@ var runGBSearch = (event => {
 
 // MOVIE TMDB Search
 var runTMDBSearch = (event => {
+    searchTerm = $("#search-input").val();
+    let tmdbFetch = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbAPI + "&query=" + searchTerm;
 
+    fetch(tmdbFetch)
+    .then((response) => {
+        return response.json();
+    })
+    .then((response) => {
+        // Movie description
+        $('#movie-description').html("<h5>Movie Description: </h5>" + response.results[0].overview);
+        // Movie rating
+        let movieRating = response.results[0].vote_average;
+        $('#movie-rating').html(`Movie Rating: <span id="mRate"> ${movieRating}</span>`);
+        // Color rating based on scale 
+        if (movieRating>=0 && movieRating<5){
+            $('#mRate').attr("class", "round alert label");
+        } else if (movieRating>=5 && movieRating<7){
+            $('#mRate').attr("class", "round warning label");
+        } else if (movieRating>=7){
+            $('#mRate').attr("class", "round success label");
+        };
+    })
 })
 
 // Run Taste Dive API https://tastedive.com/read/api
 var runTasteDive = (event => {
+    searchTerm = $("#search-input").val();
+    // cors-anywhere solves cors issue
+    let tasteDriveFetch = "https://cors-anywhere.herokuapp.com/" + "https://tastedive.com/api/similar?q=" + searchTerm +"&verbose=1" + "&k=" + tasteDiveAPI;
+
+    fetch(tasteDriveFetch)
+    .then((response) => {
+        return response.json();
+    })
+    .then((response) => {
+        // Wikipedia link
+        $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}">Wikipedia</a>`);
+        // Populate suggested titles
+            $('#similar').html(`
+            
+                <h5>Similar Titles: </h5>
+
+            <div class="grid-x grid-margin-x">
+            <div class="cell small-3">
+                <div class="card">
+                    <div class="card-section">
+                        <p>${response.Similar.Results[0].Name}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-3">
+                <div class="card">
+                    <div class="card-section">
+                        <p>${response.Similar.Results[1].Name}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-3">
+            <div class="card">
+                <div class="card-section">
+                    <p>${response.Similar.Results[2].Name}</p>
+                </div>
+            </div>
+        </div>
+        <div class="cell small-3">
+        <div class="card">
+            <div class="card-section">
+                <p>${response.Similar.Results[3].Name}</p>
+            </div>
+        </div>
+    </div></div>
+            `);
+
+    })
 })
 
 // save the searches to storage
