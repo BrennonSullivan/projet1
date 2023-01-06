@@ -16,6 +16,10 @@
 
 **[Deployed Application]()**
 
+``as a user i want to be suggested a book 
+based on my interests i input into a text box
+then i am presented a result``
+
 For this project we chose [Foundation](https://get.foundation/) as our CSS of choice.
 
 The application is an interactive search query for book title that returns to the user results pertaining the book (and applicable movie version) from three different server-side APIs:
