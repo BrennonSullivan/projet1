@@ -86,3 +86,12 @@ $('#menu-title').on("click", (event) => {
     $('#search-input').empty(); 
 });
 
+// Can now press "ENTER" to execute the click event and run search
+$("#search-input").keypress((event) => { 
+    if (event.keyCode === 13) { 
+        $(".button").click(); 
+    } 
+}); 
+$(".button").on('click', (event) => {
+    runApp();
+});
