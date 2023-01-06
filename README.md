@@ -12,11 +12,11 @@
 * [Brennon Sullivan](https://github.com/brennonsullivan)
 * [Eric Reyes](https://github.com/ericrey93) 
 * [Ilknur Dayanc](https://github.com/ilknur2603)
-* [Roger Davis]()
+* []()
 
-**[Deployed Application]()**
+**[Deployed Application](BrennonSullivan.github.io/projet1)**
 
-
+[Project repository](https://github.com/BrennonSullivan/projet1) 
 
 For this project we chose [Foundation](https://get.foundation/) as our CSS of choice.
 
