@@ -25,15 +25,50 @@ https://github.com/brennonsullivan/project1
 
 // Google Books Search and append to html
 var runGBSearch = (event => {
-});
+    searchTerm = $("#search-input").val();
+    var googleFetch = "https://www.googleapis.com/books/v1/volumes?q=" + searchTerm;
+    // fetch API
+    fetch(googleFetch)
+    .then((response) => {
+        return response.json();
+    })
+    .then((response) => {
+        // for reference - delete console.log when finished
+        saveBook(response.items[0].volumeInfo.title);
+        // populates the html div
+        // Book Cover
+        $('#image').html(`<a href="#"><img src="${response.items[0].volumeInfo.imageLinks.smallThumbnail}"></a>`);
+        // Book Title
+        $('#title').html(response.items[0].volumeInfo.title);
+        // Book Author
+        $('#author').html(response.items[0].volumeInfo.authors[0]);
+        // Book Rating
+        let bookRating = response.items[0].volumeInfo.averageRating;
+        $('#book-rating').html(`Book Rating: <span id="bRate"> ${bookRating}</span>`);
+        // Color Rating based on score
+        if (bookRating>=0 && bookRating<2){
+            $('#bRate').attr("class", "round alert label");
+        } else if (bookRating>=2 && bookRating<4){
+            $('#bRate').attr("class", "round warning label");
+        } else if (bookRating>=4){
+            $('#bRate').attr("class", "round success label");
+        };
+        // Preview in Google Books
+        $('#google-preview').html(`  <a href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
+        // Book description
+        $('#book-description').html("<h5>Book Description: </h5>" + response.items[0].volumeInfo.description + "<br>");
+
+    });
+})
 
 // MOVIE TMDB Search
 var runTMDBSearch = (event => {
-});
+
+})
 
 // Run Taste Dive API https://tastedive.com/read/api
 var runTasteDive = (event => {
-});
+})
 
 // save the searches to storage
 var saveBook = (newBook) => {
