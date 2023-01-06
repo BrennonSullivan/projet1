@@ -190,6 +190,18 @@ $('#menu-title').on("click", (event) => {
     $('#search-input').empty(); 
 });
 
+// to call from suggestions at bottom into new search
+$('#similar').on("click", (event) => {
+    event.preventDefault();
+    $("#search-input").val(event.target.textContent);
+    runApp();
+    $('#search-input').empty();
+    // resets window to the top on new search
+    $(document).ready(function(){
+        $(window).scrollTop(0);
+    });
+});
+
 // Can now press "ENTER" to execute the click event and run search
 $("#search-input").keypress((event) => { 
     if (event.keyCode === 13) { 
