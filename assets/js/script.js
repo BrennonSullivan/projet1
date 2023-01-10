@@ -95,7 +95,7 @@ var runTasteDive = (event => {
 
     fetch(tasteDriveFetch)
     .then((response) => {
-        return response.json();
+        return response.json(); 
     })
     .then((response) => {
         // Wikipedia link
