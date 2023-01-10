@@ -91,7 +91,7 @@ var runTMDBSearch = (event => {
 var runTasteDive = (event => {
     searchTerm = $("#search-input").val();
     // cors-anywhere solves cors issue
-    let tasteDriveFetch = "https://cors-anywhere.herokuapp.com/" + "https://tastedive.com/api/similar?q=" + searchTerm +"&verbose=1" + "&k=" + tasteDiveAPI;
+    let tasteDriveFetch = "https://tastedive.com/api/similar?q=" + searchTerm +"&verbose=1" + "&k=" + tasteDiveAPI;
 
     fetch(tasteDriveFetch)
     .then((response) => {
