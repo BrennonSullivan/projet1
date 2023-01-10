@@ -58,7 +58,11 @@ var runGBSearch = (event => {
         // Preview in Google Books
         $('#google-preview').html(`  <a href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
         // Book description
+        if (response.items && response.items.length > 0) {
         $('#book-description').html("<h5>Book Description: </h5>" + response.items[0].volumeInfo.description + "<br>");
+         } else {
+        $('#book-description').html("<h5>Book Description: </h5>No results found.");
+      }
 
     });
 })
@@ -74,7 +78,11 @@ var runTMDBSearch = (event => {
     })
     .then((response) => {
         // Movie description
+        if (response.results && response.results.length > 0) {
         $('#movie-description').html("<h5>Movie Description: </h5>" + response.results[0].overview);
+            } else {
+                  $('#movie-description').html("<h5>Movie Description: </h5>No results found.");
+            }
         // Movie rating
         let movieRating = response.results[0].vote_average;
         $('#movie-rating').html(`Movie Rating: <span id="mRate"> ${movieRating}</span>`);
@@ -97,7 +105,7 @@ var runTasteDive = (event => {
 
     fetch(tasteDriveFetch)
     .then((response) => {
-        return response.json(); 
+        return response.json();
     })
     .then((response) => {
         // Wikipedia link
