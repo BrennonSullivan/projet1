@@ -1,0 +1,16 @@
+//Creating and Using Branches
+1) Check what branch you are in
+    command to use is "git branch"
+2) Always make sure you are branching out from dev branch. Once you confirm
+    you are on the dev branch. You want to crate a new branch from dev. 
+3) How do you create a new branch? 
+    command to use is "git branch test"
+4) Check that your branch is created and available with 
+    command to use is "git branch"
+5) Now you want to use that branch, so you checkout
+    command to use is "git checkout test" 
+    note: it is test, since that is what we called it. 
+
+// How to commit and push
+1) Do the task/work assigned. 
+2) Check what has been done, do git status
