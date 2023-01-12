@@ -27,12 +27,14 @@
         <div data-sticky-container>
             <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
             <div class="top-bar-left">
+							<!-- Take another look at this, why the null values? -->
               <ul class="dropdown menu" data-dropdown-menu>
                 <li class="menu-text"></li>
                 <li>
+								<!-- This needs to be updated to a span tag -->
                 <a>Saved Searches</a>
-                <ul class="menu vertical" id="menu-title">
-                </ul>
+								<!-- You should not have a ul inside a li, needs to be updated -->
+                <ul class="menu vertical" id="menu-title"></ul>
                 </li>
               </ul>
             </div>
