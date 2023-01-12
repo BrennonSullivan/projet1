@@ -16,7 +16,7 @@
 
 **[Deployed Application](BrennonSullivan.github.io/projet1)**
 
-<h3>Sometimes it is nessesary to open <a href='https://cors-anywhere.herokuapp.com/corsdemo'>this site</a> and click the button first to prevent any CORS errors</h3>
+<h3>Sometimes it is nessesary to open <a href='https://cors-anywhere.herokuapp.com/corsdemo'>this site</a> and click the button first to prevent any CORS errors.</h3>
 this unlocks the demo we are using for one of the featurs on our site
 
 For this project we chose [Foundation](https://get.foundation/) as our CSS of choice.
