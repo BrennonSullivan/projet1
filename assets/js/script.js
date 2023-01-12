@@ -83,6 +83,7 @@ var runTMDBSearch = (event => {
     .then((response) => {
         return response.json();
     })
+    
     .then((response) => {
         // Movie description
         if (response.results && response.results.length > 0) {
@@ -102,6 +103,7 @@ var runTMDBSearch = (event => {
             $('#mRate').attr("class", "round success label");
         };
     })
+    
 })
 
 // Run Taste Dive API https://tastedive.com/read/api
@@ -117,7 +119,7 @@ var runTasteDive = (event => {
     .then((response) => {
         // Wikipedia link
         if (response.Similar.Info[0].wUrl !== undefined && response.Similar.Info[0].wUrl.includes("wikipedia")) {
-            $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}"><i class="fas fa-book-reader"></i>     Wikipedia</a>`);
+            $('#wikipedia').html(`  <a target='_blank' href="${response.Similar.Info[0].wUrl}"><i class="fas fa-book-reader"></i>     Wikipedia</a>`);
         } else {
             $('#wikipedia').html('');
         }
