@@ -14,3 +14,30 @@
 // How to commit and push
 1) Do the task/work assigned. 
 2) Check what has been done, do git status
+3) Once you are happy with your changes
+    command to do is "git add ."   
+    note: the period . will add all your modified files. 
+4) Then you want to commit  
+    command to do is "git commit -m "message""
+5) Set the upstream 
+    command to do so is "git push --set-upstream origin test"
+
+
+// How to merge with your dev branch
+1) In your web browser navigate to your github repo
+    note: you don't have to merge after every commit, only when you are done, with your features. 
+2) Select the branch that you just pushed.
+3) Compare and Pull request, which will merge with DEV. 
+    This is important, make sure that you are merging into DEV and not MAIN
+    so it should look something like this base:dev <-- compare: test
+4) After confirming merge and commenting you can delete the old branch that you just merged
+    since you are done working with it, you don't need it anymore. 
+
+//
+1) Start the proccess all over again. 
+2) Delete the branch that you just pushed.
+    command to do so is. "git branch -D test"
+3) Now checkout dev branch since you should always be working from dev. 
+    command to do is. "git checkout dev"
+4) Now do a pull to make sure you have the latest code locally. 
+    command to do so it. "git pull"
