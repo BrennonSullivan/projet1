@@ -63,7 +63,7 @@ var runGBSearch = (event => {
             $('#bRate').attr("class", "round success label");
         };
         // Preview in Google Books
-        $('#google-preview').html(`  <a href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
+        $('#google-preview').html(`  <a target="_blank" href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
         // Book description
         if (response.items && response.items.length > 0) {
         $('#book-description').html("<h5>Book Description: </h5>" + response.items[0].volumeInfo.description + "<br>");
@@ -116,8 +116,12 @@ var runTasteDive = (event => {
     })
     .then((response) => {
         // Wikipedia link
-        $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}"><i class="fab fa-wikipedia-w"></i>    Wikipedia</a>`);
-        // Populate suggested titles
+        if (response.Similar.Info[0].wUrl !== undefined && response.Similar.Info[0].wUrl.includes("wikipedia")) {
+            $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}"><i class="fas fa-book-reader"></i>     Wikipedia</a>`);
+        } else {
+            $('#wikipedia').html('');
+        }
+                // Populate suggested titles
             $('#similar').html(`
             
                 <h5>Similar Titles: </h5>
