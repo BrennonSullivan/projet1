@@ -24,6 +24,13 @@ Repository:
 https://github.com/brennonsullivan/project1
 `);
 
+//sanitize localstorage
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (!key.match(/^books\d+$/)) {
+        localStorage.removeItem(key);
+    }
+}
 
 // Google Books Search and append to html
 var runGBSearch = (event => {
