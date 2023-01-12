@@ -1,8 +1,8 @@
 // The Movie Database API Key
-var tmdbAPI = "72e6d16c6e6cd21a8016a0865ce0c219";
+var tmdbAPI = "24015e7692b811d33d1c989cbd42b043";
 
 // Taste Dive API Key
-var tasteDiveAPI = "446474-bootcamp-PA85OKRH"
+var tasteDiveAPI = "367428-bootcamp-HTLV36YO";
 
 // Define Global Variables
 var newbook;
@@ -11,17 +11,19 @@ var lastBook="";
 
 // Get street cred for our work!
 console.log(`
-UT Coding Bootcamp Project #1 - Group #2
+Rice Coding Bootcamp Project #1 - Group #2
 
 Developed by:
 Brennon Sullivan
 Eric Reyes
 Ilknur Dayanc
+Roger Davis
 
 
 Repository:
 https://github.com/brennonsullivan/project1
 `);
+
 
 // Google Books Search and append to html
 var runGBSearch = (event => {
@@ -56,7 +58,11 @@ var runGBSearch = (event => {
         // Preview in Google Books
         $('#google-preview').html(`  <a href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
         // Book description
+        if (response.items && response.items.length > 0) {
         $('#book-description').html("<h5>Book Description: </h5>" + response.items[0].volumeInfo.description + "<br>");
+         } else {
+        $('#book-description').html("<h5>Book Description: </h5>No results found.");
+      }
 
     });
 })
@@ -72,7 +78,11 @@ var runTMDBSearch = (event => {
     })
     .then((response) => {
         // Movie description
+        if (response.results && response.results.length > 0) {
         $('#movie-description').html("<h5>Movie Description: </h5>" + response.results[0].overview);
+            } else {
+                  $('#movie-description').html("<h5>Movie Description: </h5>No results found.");
+            }
         // Movie rating
         let movieRating = response.results[0].vote_average;
         $('#movie-rating').html(`Movie Rating: <span id="mRate"> ${movieRating}</span>`);
@@ -91,7 +101,7 @@ var runTMDBSearch = (event => {
 var runTasteDive = (event => {
     searchTerm = $("#search-input").val();
     // cors-anywhere solves cors issue
-    let tasteDriveFetch = "https://tastedive.com/api/similar?q=" + searchTerm +"&verbose=1" + "&k=" + tasteDiveAPI;
+    let tasteDriveFetch = "https://cors-anywhere.herokuapp.com/" + "https://tastedive.com/api/similar?q=" + searchTerm +"&verbose=1" + "&k=" + tasteDiveAPI;
 
     fetch(tasteDriveFetch)
     .then((response) => {
@@ -99,7 +109,7 @@ var runTasteDive = (event => {
     })
     .then((response) => {
         // Wikipedia link
-        $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}">Wikipedia</a>`);
+        $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}"><i class="fab fa-wikipedia-w"></i>    Wikipedia</a>`);
         // Populate suggested titles
             $('#similar').html(`
             
@@ -153,7 +163,7 @@ var saveBook = (newBook) => {
     };
     // Render to update in "real-time"
     renderBook();
-};
+}
 
 // render the books to the dropdown menu
 var renderBook = () => {
@@ -165,7 +175,7 @@ var renderBook = () => {
         let bookEl = `<li id="recall-book"><a id="searchedBook">${book}</a></li>`;
         $('#menu-title').prepend(bookEl);
         }
-};
+}
 
 // run main application
 var runApp = (event => {
