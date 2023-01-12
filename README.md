@@ -29,7 +29,7 @@ The site is responsive and changes based upon the size of the window viewing it.
 
 It has a polished UI.
 
-It has a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.). Favicons are required to be in root folder per favicon documentation [Favicon Generator](https://realfavicongenerator.net/)
+It has a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.). Favicons are required to be in root folder per favicon documentation [Favicon](https://favicon.io/)
 
 Has a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
