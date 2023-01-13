@@ -234,3 +234,8 @@ $("#search-input").keypress((event) => {
 $(".button").on('click', (event) => {
     runApp();
 });
+
+$("#refreshBtn").on('click', (refresh) => {
+    localStorage.clear()
+    document.location.reload()
+});
