@@ -4,6 +4,10 @@ body {
     background-image: url(https://innocenceproject.org/wp-content/uploads/2020/02/patrick-tomasso-books-unsplash-scaled.jpg);
 
   }
+  #refreshBtn {
+    position: absolute;
+    margin-left: 230px;
+  }
   
   h1 {
     font-size: 50px;
