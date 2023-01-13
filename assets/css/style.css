@@ -38,6 +38,10 @@ body {
    font-size: 32px;
    font-weight: bolder;
   }
+.cell-small-3{  
+  border-style: 15px solid rgb(44, 24, 134);
+}
+
   .card-section {
     cursor: pointer;
   }
