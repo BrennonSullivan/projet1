@@ -24,6 +24,13 @@ Repository:
 https://github.com/brennonsullivan/project1
 `);
 
+//sanitize localstorage
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (!key.match(/^books\d+$/)) {
+        localStorage.removeItem(key);
+    }
+}
 
 // Google Books Search and append to html
 var runGBSearch = (event => {
@@ -56,7 +63,7 @@ var runGBSearch = (event => {
             $('#bRate').attr("class", "round success label");
         };
         // Preview in Google Books
-        $('#google-preview').html(`  <a href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
+        $('#google-preview').html(`  <a target="_blank" href="${response.items[0].volumeInfo.previewLink}"><i class="fas fa-book-reader"></i>     Preview (Google Books)</a>`);
         // Book description
         if (response.items && response.items.length > 0) {
         $('#book-description').html("<h5>Book Description: </h5>" + response.items[0].volumeInfo.description + "<br>");
@@ -76,6 +83,7 @@ var runTMDBSearch = (event => {
     .then((response) => {
         return response.json();
     })
+    
     .then((response) => {
         // Movie description
         if (response.results && response.results.length > 0) {
@@ -95,6 +103,7 @@ var runTMDBSearch = (event => {
             $('#mRate').attr("class", "round success label");
         };
     })
+    
 })
 
 // Run Taste Dive API https://tastedive.com/read/api
@@ -109,8 +118,12 @@ var runTasteDive = (event => {
     })
     .then((response) => {
         // Wikipedia link
-        $('#wikipedia').html(`  <a href="${response.Similar.Info[0].wUrl}"><i class="fab fa-wikipedia-w"></i>    Wikipedia</a>`);
-        // Populate suggested titles
+        if (response.Similar.Info[0].wUrl !== undefined && response.Similar.Info[0].wUrl.includes("wikipedia")) {
+            $('#wikipedia').html(`  <a target='_blank' href="${response.Similar.Info[0].wUrl}"><i class="fas fa-book-reader"></i>     Wikipedia</a>`);
+        } else {
+            $('#wikipedia').html('');
+        }
+                // Populate suggested titles
             $('#similar').html(`
             
                 <h5>Similar Titles: </h5>
@@ -220,4 +233,9 @@ $("#search-input").keypress((event) => {
 }); 
 $(".button").on('click', (event) => {
     runApp();
+});
+
+$("#refreshBtn").on('click', (refresh) => {
+    localStorage.clear()
+    document.location.reload()
 });

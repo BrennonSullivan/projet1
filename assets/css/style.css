@@ -4,6 +4,11 @@ body {
     background-image: url(https://innocenceproject.org/wp-content/uploads/2020/02/patrick-tomasso-books-unsplash-scaled.jpg);
 
   }
+  #refreshBtn {
+    position: absolute;
+    margin-left: 230px;
+    cursor: pointer;
+  }
   
   h1 {
     font-size: 50px;
@@ -11,6 +16,7 @@ body {
     color: rgb(206, 12, 12);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    cursor:default;
   }
   
   p {
@@ -35,3 +41,7 @@ body {
 .cell-small-3{  
   border-style: 15px solid rgb(44, 24, 134);
 }
+
+  .card-section {
+    cursor: pointer;
+  }

@@ -10,14 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-
-
-
     <title>ReadIt!</title>
 </head>
 <body>
@@ -38,12 +32,13 @@
                 </li>
               </ul>
             </div>
+            <button type="button" id="refreshBtn">♲            </button>
             </div>
         </div>  
     
         <!-- Submit Form -->
         <div class="grid-container fluid">
-            <h1>ReadIt!</h1>
+            <h1><a href="./index.html" style="text-decoration: none; color: rgb(206, 12, 12);">ReadIt!</a></h1>
             <div class="input-group">
                 <!-- Search Label with Magnifying Glass -->
                 <span class="input-group-label"></span>
@@ -59,7 +54,7 @@
         <div class="grid-container">
             <!-- append movie and book search results here-->
             <div id="results">
-                <div>
+                <div id="auto">
                     <div class="grid-x grid-margin-x result-header">
     
                         <!-- Book Cover -->
@@ -99,7 +94,7 @@
         </div>
     
     </div> 
-    <p style="color: aliceblue;">Sometimes it is nessesary to open <a style="color: aqua;" href='https://cors-anywhere.herokuapp.com/corsdemo'>this site</a> and click the button first to prevent any CORS errors.</p>
+    <p style="color: aliceblue;">Sometimes it is nessesary to open <a style="color: aqua;" target="_blank" href='https://cors-anywhere.herokuapp.com/corsdemo'>this site</a> and click the button first to prevent any CORS errors.</p>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <!-- moment.js -->
