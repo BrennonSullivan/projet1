@@ -25,11 +25,11 @@ body {
   }
   
   .cell,.grid-x {
-    background: gray;
+    background: #666666f0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: antiquewhite;
     font-size: 20px;
-    
+
   }
 
   h5 {
@@ -38,9 +38,9 @@ body {
    font-size: 32px;
    font-weight: bolder;
   }
-.cell-small-3{  
+  .cell-small-3{  
   border-style: 15px solid rgb(44, 24, 134);
-}
+  }
 
   .card-section {
     cursor: pointer;

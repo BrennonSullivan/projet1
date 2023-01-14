@@ -20,19 +20,17 @@
         <!-- Navigation -->
         <div data-sticky-container>
             <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-            <div class="top-bar-left">
-							<!-- Take another look at this, why the null values? -->
-              <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text"></li>
-                <li>
-								<!-- This needs to be updated to a span tag -->
-                <a>Saved Searches</a>
-								<!-- You should not have a ul inside a li, needs to be updated -->
-                <ul class="menu vertical" id="menu-title"></ul>
-                </li>
-              </ul>
-            </div>
-            <button type="button" id="refreshBtn">♲            </button>
+                <div class="top-bar-left">
+                                <!-- Take another look at this, why the null values? -->
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text"></li>
+                        <li>
+                        <a>Saved Searches</a>
+                        <ul class="menu vertical" id="menu-title"></ul>
+                        </li>
+                    </ul>
+                </div>
+            <button type="button" id="refreshBtn">♲</button>
             </div>
         </div>  
     
@@ -54,12 +52,12 @@
         <div class="grid-container">
             <!-- append movie and book search results here-->
             <div id="results">
-                <div id="auto">
-                    <div class="grid-x grid-margin-x result-header">
+                <div>
+                    <div class="grid-x grid-margin-x result-header" style="margin: 0 15px;">
     
                         <!-- Book Cover -->
                         <div class="cell-small-3">
-                            <div id="image"></div>
+                            <div  id="image"></div>
                         </div>
     
                         <!-- Book/Movie Information to the right of cover -->
@@ -74,17 +72,17 @@
                     </div>
     
                     <!-- Book Description -->
-                    <div class="grid-x grid-margin-x">
+                    <div class="grid-x grid-margin-x" style="padding: 0px 20px; margin: 0 15px;">
                         <div id="book-description" class="text-justify"></div>
                     </div>
     
                     <!-- Movie Description -->
-                    <div class="grid-x grid-margin-x">
+                    <div class="grid-x grid-margin-x" style="padding: 0px 20px; margin: 0 15px;">
                         <div id="movie-description" class="text-justify"></div>
                     </div>
     
                     <!-- Similar, "you might also like" section -->
-                    <div class="grid-x grid-margin-x">
+                    <div class="grid-x grid-margin-x" style="padding: 0px 20px; margin: 0 15px;">
                     <div id="similar">
                     </div>
                     </div>

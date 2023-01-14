@@ -46,7 +46,7 @@ var runGBSearch = (event => {
         saveBook(response.items[0].volumeInfo.title);
         // populates the html div
         // Book Cover
-        $('#image').html(`<a href="#"><img src="${response.items[0].volumeInfo.imageLinks.smallThumbnail}"></a>`);
+        $('#image').html(`<a href="#"><img style='padding:15px 15px 0 15px;' src="${response.items[0].volumeInfo.imageLinks.smallThumbnail}"></a>`);
         // Book Title
         $('#title').html(response.items[0].volumeInfo.title);
         // Book Author
