@@ -6,7 +6,7 @@ body {
   }
   #refreshBtn {
     position: absolute;
-    margin-left: 230px;
+    margin-left: 10px;
     cursor: pointer;
   }
   
