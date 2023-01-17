@@ -22,6 +22,7 @@ Ilknur Dayanc
 Repository:
 https://github.com/brennonsullivan/project1
 `);
+// Roger Davis
 
 //sanitize localstorage
 for (var i = 0; i < localStorage.length; i++) {
