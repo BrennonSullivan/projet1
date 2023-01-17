@@ -6,7 +6,7 @@
 [![jQuery](https://img.shields.io/badge/jQuery-blue)](https://jquery.com/)
 ![Foundation](https://img.shields.io/badge/-Foundation-orange)
 
-<img src="./assets/images/screenshot.png"> 
+<img src="./assets/images/2023-01-16 20_13_07-Window.png"> 
 
 ## Developed by: ##
 * [Brennon Sullivan](https://github.com/brennonsullivan)

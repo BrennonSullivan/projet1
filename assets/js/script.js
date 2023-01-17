@@ -17,7 +17,6 @@ Developed by:
 Brennon Sullivan
 Eric Reyes
 Ilknur Dayanc
-Roger Davis
 
 
 Repository:
