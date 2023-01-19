@@ -14,7 +14,7 @@
 * [Ilknur Dayanc](https://github.com/ilknur2603)
 <!---* [Roger Davis](https://github.com/RogerD88)--->
 
-**[Deployed Application](BrennonSullivan.github.io/projet1)**
+**[Deployed Application](https://brennonsullivan.github.io/projet1/)**
 
 <h3>Sometimes it is nessesary to open <a href='https://cors-anywhere.herokuapp.com/corsdemo'>this site</a> and click the button first to prevent any CORS errors.</h3>
 this unlocks the demo we are using for one of the featurs on our site
