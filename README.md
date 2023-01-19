@@ -6,15 +6,18 @@
 [![jQuery](https://img.shields.io/badge/jQuery-blue)](https://jquery.com/)
 ![Foundation](https://img.shields.io/badge/-Foundation-orange)
 
-<img src="./screenshot.PNG"> 
+<img src="./assets/images/2023-01-16 20_13_07-Window.png"> 
 
 ## Developed by: ##
 * [Brennon Sullivan](https://github.com/brennonsullivan)
 * [Eric Reyes](https://github.com/ericrey93) 
 * [Ilknur Dayanc](https://github.com/ilknur2603)
-* [Roger Davis]()
+<!---* [Roger Davis](https://github.com/RogerD88)--->
 
 **[Deployed Application](BrennonSullivan.github.io/projet1)**
+
+<h3>Sometimes it is nessesary to open <a href='https://cors-anywhere.herokuapp.com/corsdemo'>this site</a> and click the button first to prevent any CORS errors.</h3>
+this unlocks the demo we are using for one of the featurs on our site
 
 For this project we chose [Foundation](https://get.foundation/) as our CSS of choice.
 
@@ -29,7 +32,7 @@ The site is responsive and changes based upon the size of the window viewing it.
 
 It has a polished UI.
 
-It has a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.). Favicons are required to be in root folder per favicon documentation [Favicon Generator](https://realfavicongenerator.net/)
+It has a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.). Favicons are required to be in root folder per favicon documentation [Favicon](https://favicon.io/)
 
 Has a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
